@@ -1,0 +1,19 @@
+
+Sujalqvam za drugite zadachi no tvurde kusno razbrah che trqbva da se kachvat
+
+===========================================
+
+hello = "Hello, World!"
+name = "Plamen"
+print(hello, name)
+
+============================================
+
+num1 = float(input("Enter a number: "))
+num2 = float(input("Enter another number: "))
+
+num3 = num1**2 + num2**2
+num3 = num3**0.5
+print(f"The third side is {num3}")
+
+============================================
