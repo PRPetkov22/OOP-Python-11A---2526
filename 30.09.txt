@@ -1,0 +1,116 @@
+=============================================
+
+fruits = [0, 1, 2, 3, 4, 5]
+
+print(fruits[0:7:1]) # [0, 1, 2, 3, 4, 5]
+print(fruits[3::]) # [3, 4, 5]
+print(fruits[::-1]) # [5, 4, 3, 2, 1, 0]
+
+=============================================
+
+fruits = ["apple", "banana"]
+fruits.reverse()
+
+print(fruits)
+last = fruits.pop()
+print(last)
+
+fruits.clear()
+
+===================================
+
+nums = [1,2,3,7,5,6,4,8,9]
+nums.sort()
+print(nums)
+
+===================================
+
+letters = ["w", "a", "b","t","c","q", "a"]
+letters.sort()
+print(letters)
+letters.reverse()
+print(letters)
+
+===================================
+
+fruits = ["apple", "banana", "orange", "strawberry"]
+for fruit in enumerate(fruits):
+    print(fruit)
+
+======================================================
+
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+print(matrix[2][2]) # 9
+
+======================================================
+
+square = [x**2 for x in range(10) if x % 2 == 0]
+print(square)
+
+even = [x for x in range(10) if x % 2 == 0]
+print(even)
+
+======================================================
+
+#1.Zadacha
+list = [1, 2, 3, 4, 5] 
+print(list[0], list[4])
+
+for i in range(0, 5):
+    if list[i] % 2 == 0:
+        print(list[i])
+
+=====================================================
+
+#2.Zadacha
+list = []
+
+for i in range(5):
+    names = str(input())
+    list.append(names)
+list.reverse()
+print(list)
+
+=====================================================
+
+#3.Zadacha
+numbers = [3, 7, 2, 8, 5, 10 ,1]
+max = numbers[0]
+min = numbers[0]
+for i in range(7):
+    if numbers[i] > max:
+        max = numbers[i]
+for i in range(7):
+    if numbers[i] < min:
+        min = numbers[i]
+print(max)
+print(min)
+
+=====================================================
+
+#4.Zadacha
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+print(matrix[0])
+print(matrix[1])
+print(matrix[2])
+
+=====================================================
+
+#5.Zadacha
+numbers = []
+for i in range(21):
+    numbers.append(i)
+even = [x for x in numbers if x%2==0]
+square = [x**2 for x in numbers if x%2==0]
+print(even)
+print(square)
+
+
