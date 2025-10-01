@@ -1,0 +1,14 @@
+==================================================
+           --- Manager for orders ---
+
+all_items = []
+id = int(input("Enter your id: "))
+client = input("Enter your client name: ")
+items_num = int(input("Enter number of items: "))
+
+for i in range(items_num):
+    items = input("Enter item name: ")
+    all_items.append(items)
+print(f"ORDER {id} | {client} | {all_items}")
+
+==================================================
