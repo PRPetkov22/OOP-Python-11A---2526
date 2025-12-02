@@ -1,0 +1,17 @@
+class Rectangle:
+    def __init__(self, len, wid):
+        self.len = len
+        self.wid = wid
+
+    def area(self):
+        return self.len * self.wid
+
+    def perimeter(self):
+        return 2 * (self.len + self.wid)
+
+
+rec = Rectangle(5, 3)
+
+print(f"Лице - {rec.area()}")
+
+print(f"Периметър - {rec.perimeter()}")

@@ -1,0 +1,29 @@
+class BankAccount:
+    def __init__(self, owner, start_balance):
+        self.owner = owner
+        self.balance = start_balance
+
+    def deposit(self, amount):
+        self.balance = self.balance + amount
+        print(f"Депозирани {amount} лв. като новя баланс е - {self.balance} лв.")
+
+    def withdraw(self, amount):
+        if amount > self.balance:
+            print(f"Недостатъчна наличност баланса е - {self.balance} лв.")
+        else:
+            self.balance = self.balance - amount
+            print(f"Изтеглени {amount} лв. като новия баланс е - {self.balance} лв.")
+
+
+acc = BankAccount("Пламен", 6500)
+
+print(f"Собственик - {acc.owner}")
+
+print(f"Начален баланс - {acc.balance} лв.")
+print()
+
+acc.deposit(700)
+
+acc.withdraw(200)
+
+acc.withdraw(7000)

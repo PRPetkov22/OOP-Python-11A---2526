@@ -1,0 +1,18 @@
+class TemperatureConverter:
+    def __init__(self, cel):
+        self.cel = cel
+
+    def to_fahrenheit(self):
+        return self.cel * 9 / 5 + 32
+
+    def to_kelvin(self):
+        return self.cel + 273.15
+
+
+temperatue = TemperatureConverter(21)
+
+print(f"Температура в Целзий e {temperatue.cel} C")
+
+print(f"Температура във Фаренхайт е {temperatue.to_fahrenheit():.2f} F")
+
+print(f"Температура в Келвин е {temperatue.to_kelvin():.2f} K")
