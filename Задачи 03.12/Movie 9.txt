@@ -1,0 +1,26 @@
+class Movie:
+    def __init__(self, title, year, rating):
+        self.title = title
+        self.year = year
+        self.rating = rating
+
+    def add_rating(self, r):
+        self.rating.append(r)
+
+    def average_rating(self):
+        if len(self.rating) == 0:
+            return 0
+        return sum(self.rating) / len(self.rating)
+
+
+movie_1 = Movie("Dumb and Dumber", 2014, [9, 10, 9.5, 10])
+
+movie_2 = Movie("365 days", 2020, [7, 8, 10, 9, 7])
+
+movie_1.add_rating(9)
+
+movie_2.add_rating(10)
+
+print(movie_1.title, "-", movie_1.average_rating())
+
+print(movie_2.title, "-", movie_2.average_rating())

@@ -1,0 +1,28 @@
+class ShoppingCart:
+    def __init__(self):
+        self.items = []
+
+    def add_item(self, name, price):
+        self.items.append((name, price))
+
+    def total(self):
+        return sum(price for name, price in self.items)
+
+    def print_receipt(self):
+        for name, price in self.items:
+            print(f"{name} - {price} лв.")
+        print("Общата сума е - ", self.total(), "лв.")
+
+shop_cart = ShoppingCart()
+
+shop_cart.add_item("Дъвки", 1.30)
+
+shop_cart.add_item("Масажор", 29.90)
+
+shop_cart.add_item("Краставици", 5.40)
+
+shop_cart.add_item("Олио", 2.10)
+
+shop_cart.add_item("Кренвирши", 8.60)
+
+shop_cart.print_receipt()
