@@ -1,0 +1,36 @@
+num_students = int(input())
+
+all_grades = []
+good_behavior_list = []
+
+count_above_550 = 0
+count_below_350 = 0
+
+for _ in range(num_students):
+    name, grade_str, behavior = input().split()
+    grade = float(grade_str)
+
+    all_grades.append(grade)
+
+    if grade > 5.50:
+        count_above_550 += 1
+    if grade < 3.50:
+        count_below_350 += 1
+
+    if behavior == "добро":
+        good_behavior_list.append((name, grade))
+
+average = sum(all_grades) / len(all_grades)
+
+good_behavior_list.sort(key=lambda student: student[1], reverse=True)
+
+print(f"Среден успех на класа: {average:.2f}")
+print(f"Ученици над 5.50: {count_above_550}")
+print(f"Ученици под 3.50: {count_below_350}")
+
+print("Добро поведение (сортирани):")
+if not good_behavior_list:
+    print("Няма ученици с добро поведение.")
+else:
+    for name, grade in good_behavior_list:
+        print(f"{name} - {grade}")
